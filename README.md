@@ -1,3 +1,8 @@
+#### Running and testing 
+
+	$ ./gradlew run
+	$ curl -s -XGET http://localhost:8080/users/1 | jq .
+
 #### Reference
 * https://dzone.com/articles/spring-5-reactive-web-services
 * https://docs.spring.io/spring/docs/current/spring-framework-reference/web-reactive.html
