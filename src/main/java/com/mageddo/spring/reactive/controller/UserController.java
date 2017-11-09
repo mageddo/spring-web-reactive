@@ -8,7 +8,9 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.RestController;
 
+@RestController
 public class UserController {
 
 	private UserRepository userRepository;
@@ -20,6 +22,6 @@ public class UserController {
 
 	@GetMapping(value = "/users/{id}", produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
 	public @ResponseBody ResponseEntity<UserEntity> geatUser(@PathVariable("id") int userId){
-		return ResponseEntity.ok(userRepository.findById(userId));
+		return ResponseEntity.ok(userRepository.getOne(userId));
 	}
 }
