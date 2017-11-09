@@ -18,7 +18,7 @@ public class UserController {
 		this.userRepository = userRepository;
 	}
 
-	@GetMapping(value = "/user/{id}", produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
+	@GetMapping(value = "/users/{id}", produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
 	public @ResponseBody ResponseEntity<UserEntity> geatUser(@PathVariable("id") int userId){
 		return ResponseEntity.ok(userRepository.findById(userId));
 	}

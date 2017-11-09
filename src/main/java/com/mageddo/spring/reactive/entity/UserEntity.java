@@ -12,16 +12,18 @@ import javax.persistence.Id;
  * @since 11/9/17 6:54 PM
  */
 
-@Entity
+@Entity(name = "USER")
 public class UserEntity {
 
 	@Id
 	@GeneratedValue
+	@Column(name = "ID")
 	private int id;
 
 	@Column(nullable = false, length = 2)
 	private int age;
-	@Column
+
+	@Column(name = "NAME")
 	private String name;
 
 	public int getId() {
