@@ -1,6 +1,7 @@
 .git
 build
 .idea
-*.iml
 .gradle
 
+*.iml
+*.log
