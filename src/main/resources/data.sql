@@ -1,1 +1,1 @@
-INSERT INTO USER (ID, NAME) VALUES (1, 'Elvis'), (2, 'Bruna')
+INSERT INTO USER (AGE, NAME) VALUES (22, 'Elvis'), (21, 'Bruna')
