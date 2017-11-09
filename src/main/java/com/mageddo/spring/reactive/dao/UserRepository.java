@@ -1,10 +1,8 @@
 package com.mageddo.spring.reactive.dao;
 
 import com.mageddo.spring.reactive.entity.UserEntity;
-import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.stereotype.Repository;
+import reactor.core.publisher.Mono;
 
-@Repository
-public interface UserRepository extends JpaRepository<UserEntity, Integer> {
-
+public interface UserRepository {
+	Mono<UserEntity> getById(int userId);
 }

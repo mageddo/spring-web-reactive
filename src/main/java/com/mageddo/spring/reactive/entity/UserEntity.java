@@ -18,7 +18,7 @@ public class UserEntity {
 	@Id
 	@GeneratedValue
 	@Column(name = "ID")
-	private int id;
+	private Integer id;
 
 	@Column(nullable = false, length = 2)
 	private int age;
@@ -26,11 +26,11 @@ public class UserEntity {
 	@Column(name = "NAME")
 	private String name;
 
-	public int getId() {
+	public Integer getId() {
 		return id;
 	}
 
-	public void setId(int id) {
+	public void setId(Integer id) {
 		this.id = id;
 	}
 
