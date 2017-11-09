@@ -2,6 +2,7 @@
 build
 .idea
 .gradle
+out
 
 *.iml
 *.log
