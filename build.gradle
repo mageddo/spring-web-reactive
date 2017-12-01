@@ -8,6 +8,9 @@ repositories {
 	}
 }
 
+sourceCompatibility = '8'
+targetCompatibility = '8'
+
 mainClassName = 'com.mageddo.spring.reactive.App'
 
 dependencies {
@@ -16,6 +19,7 @@ dependencies {
 	compile group: 'org.springframework.boot', name: 'spring-boot-starter-data-jpa', version: '2.0.0.M6'
 	compile group: 'org.springframework.boot', name: 'spring-boot-starter-webflux', version: '2.0.0.M6'
 
+	compile group: 'javax.xml.bind', name: 'jaxb-api', version: '2.3.0'
 	compile 'org.slf4j:slf4j-api:1.7.18'
 	compile group: 'org.hsqldb', name: 'hsqldb', version: '2.2.8'
 
