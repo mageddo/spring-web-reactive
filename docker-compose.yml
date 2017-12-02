@@ -1,4 +1,4 @@
-version: '2'
+version: '2.2'
 services:
   spring-web-reactive:
     image: java:openjdk-8u91
@@ -10,4 +10,5 @@ services:
     command: tail -f /dev/null
 #    command: java -Xmx50m -Xss256k -jar hello-world-1.0-SNAPSHOT.jar
     mem_limit: 150m
+    cpus: 0.5
     memswap_limit: 0

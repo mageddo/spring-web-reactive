@@ -17,10 +17,13 @@
 Connect using visualvm `adding jmx connection`
 
 ```bash
-export JAVA_OPTS='-Xmx40m -Xss256k -XX:MaxMetaspaceSize=60m \
--Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=9010 \
--Dcom.sun.management.jmxremote.local.only=false \
--Dcom.sun.management.jmxremote.authenticate=false \
--Dcom.sun.management.jmxremote.ssl=false' &&\
+JAVA_OPTS='-Xmx40m -Xss256k -XX:MaxMetaspaceSize=60m' &&\
+JAVA_OPTS="$JAVA_OPTS -Dcom.sun.management.jmxremote" &&\
+JAVA_OPTS="$JAVA_OPTS -Dcom.sun.management.jmxremote.port=9010" &&\
+JAVA_OPTS="$JAVA_OPTS -Dcom.sun.management.jmxremote.local.only=false" &&\
+JAVA_OPTS="$JAVA_OPTS -Dcom.sun.management.jmxremote.password.file=passwd.properties" &&\
+JAVA_OPTS="$JAVA_OPTS -Dcom.sun.management.jmxremote.access.file=access.properties" &&\
+JAVA_OPTS="$JAVA_OPTS -Dcom.sun.management.jmxremote.ssl=false" && \
+export JAVA_OPTS &&
 ./spring-web-reactive/bin/spring-web-reactive
 ```
